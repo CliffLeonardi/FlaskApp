@@ -1,0 +1,16 @@
+<!-- control for the template inheritance across the app -->
+
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - FlaskApp</title>
+    {% else %}
+    <title>Welcome to FlaskApp</title>
+    {% endif %}
+  </head>
+  <body>
+    <div>FlaskApp: <a href="/index">Home</a></div>
+    <hr>
+    {% block content %}{% endblock %}
+  </body>
+</html>
